@@ -1,0 +1,643 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #282828;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0%;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+/*-------------------vertical line-------------*/
+
+.vl {
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  height: 239.5px;
+}
+
+.vl1 {
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  height: 212.5px;
+}
+
+/*------------------Section One---------------------*/
+
+.secOne #background {
+  display: block;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  filter: blur(8px);
+  transition: all 1000ms linear 1s;
+}
+
+.secOne #background:hover {
+  filter: blur(0px);
+  transition: all 1000ms linear 1s;
+}
+
+.secOne .content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-top: 105px;
+  margin-left: -155px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+}
+
+.secOne .content h1 {
+  padding-top: 10px;
+  font-size: 2.2rem;
+  color: rgba(0, 0, 0, 0.9);
+  margin-top: 1px;
+  font-variant: small-caps;
+}
+
+.secOne #logo {
+  width: 180px;
+  height: 180px;
+}
+
+.secOne .content:hover {
+  filter: blur(0px) !important ;
+  transition: all 100ms linear 1s;
+}
+
+.secOne:hover .content {
+  filter: blur(2px);
+  transition: all 1000ms linear 1s;
+}
+
+/*---------------Header and NavBar------------------ */
+
+header {
+  margin-top: 5px;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 60px;
+  display: grid;
+  grid-template-columns: auto auto;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sticky {
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  width: 100%;
+  z-index: 2;
+  transition: none;
+}
+
+header .logo {
+  margin: auto;
+  font-variant: small-caps;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: black;
+}
+
+header nav {
+  display: inline-block;
+  margin-right: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav a {
+  padding: 0 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-variant: small-caps;
+  transition: all 0.2s ease-in;
+}
+
+header nav a:hover,
+header nav .active {
+  color: #00bfb6;
+}
+
+header .container {
+  color: #fff;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  float: right;
+}
+
+header .bar1,
+header .bar2,
+header .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: all 0.5s;
+}
+
+header .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  transition: all 0.5s;
+}
+
+header .change .bar2 {
+  opacity: 0;
+}
+
+header .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  transition: all 0.5s;
+}
+
+header .change nav {
+  display: block;
+}
+
+.change-header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+
+/*-----------SecTwo----------------*/
+
+.secTwo h1,
+.secThree h1,
+.secFour h1,
+.secFive h1 {
+  margin: 60px 0px 8px 0px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.secTwo .partition {
+  width: 1100px;
+  display: grid;
+  grid-template-columns: 68% 32%;
+  margin: 50px auto 0px auto;
+  transition: all 0.5s ease-in;
+}
+
+.secTwo .partition .objective {
+  line-height: 1.5em;
+}
+
+.secTwo .partition .objective h2 {
+  font-weight: bolder;
+}
+
+.secTwo .partition .objective ul {
+  list-style-type: none;
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+
+.secTwo .partition .objective .list {
+  display: grid;
+  grid-template-columns: 40% 30%;
+}
+
+.secTwo .bio {
+  width: 350px;
+  margin: 60px auto 0px 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.secTwo .bio img {
+  width: 100%;
+  height: 300px;
+  margin: 5px;
+}
+
+.secTwo .bio p {
+  margin-left: 15px;
+  font-size: 1.2em;
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*-----------SecThree----------------*/
+
+.secThree {
+  display: block;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.secThree h2 {
+  margin: 60px 0px 20px 0px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-variant: small-caps;
+}
+
+.secThree .year {
+  background-color: #00bfb6;
+  border-radius: 80px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  padding-top: 4px;
+  margin-top: calc(55% + -0.969em);
+}
+
+.secThree .degree-content {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 40px;
+  border-radius: 0.4em;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.secThree .degree-content:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 1.938em solid transparent;
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -0.969em;
+  margin-left: -1.937em;
+}
+
+.secThree .degree-content:hover {
+  background-color: #00bfb6;
+}
+.secThree .degree-content:hover:after {
+  border-right-color: #00bfb6;
+}
+.secThree .col3 {
+  float: left;
+  width: 5%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.secThree .col1 {
+  float: left;
+  width: 15%;
+  padding: 0px auto;
+}
+
+.secThree .col2 {
+  float: left;
+  width: 70%;
+  padding: 0px auto;
+}
+
+/*----------secFour-------*/
+
+.secFour {
+  background-color: black;
+  color: white;
+}
+
+.secFour h1 {
+  margin-top: 18px;
+}
+
+.secFour h2 {
+  margin: 0px auto 25px auto;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.secFour .partition {
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.secFour .partition .progress-bar {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 8px;
+}
+
+.secFour .partition progress {
+  width: 95%;
+  height: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.secFour .partition progress::-webkit-progress-bar {
+  width: 95%;
+  height: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.secFour .partition progress::-webkit-progress-value {
+  border-radius: 10px;
+  background-color: #00bfb6;
+}
+
+.secFour .partition progress::-moz-progress-bar {
+  border-radius: 10px;
+  background-color: #00bfb6;
+}
+
+.secFour .partition .progress-bar label {
+  font-variant: small-1caps;
+  font-size: 1.15em;
+}
+
+.secFour .partition .round-progress-bar .subPartition {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-bottom: 20px;
+}
+
+.secFour .partition .round-progress-bar .subPartition .c100.Color {
+  background-color: #777777;
+}
+
+.secFour .partition .round-progress-bar .subPartition .c100.Color .bar,
+.secFour .partition .round-progress-bar .subPartition .c100.Color .fill {
+  border-color: #00bfb6 !important;
+}
+
+.secFour .partition .round-progress-bar .subPartition .c100.Color:hover > span {
+  color: #00bfb6;
+}
+
+.secFour .partition .round-progress-bar .subPartition .c100.Color > span {
+  color: #777777;
+}
+
+.secFour .partition .round-progress-bar .subPartition .c100.Color:after {
+  background-color: #666666;
+}
+
+/*-------------secFive------*/
+
+.secFive {
+  height: auto;
+  margin-bottom: 60px;
+  background-color: #fff;
+}
+
+.secFive .partition {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.secFive label {
+  font-variant: small-caps;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.secFive input {
+  height: 8%;
+}
+
+.secFive input,
+.secFive textarea {
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) outset;
+  padding: 4px 2px 0px 10px;
+  font-size: 15px;
+}
+
+.secFive button {
+  width: 30%;
+  height: 15%;
+  border-radius: 8px;
+  background-color: #00bfb6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) outset;
+}
+
+/*---------------scroll-top------------------ */
+.scroll-top {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 35px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.scroll-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.scroll-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.scroll-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+
+/*------------Footer-----------*/
+
+footer {
+  text-align: center;
+  background-color: #666666;
+  font-weight: bolder;
+  z-index: 4;
+}
+
+footer p {
+  margin: 0%;
+}
+
+@media (max-width: 1300px) {
+  .secTwo .partition {
+    width: 1000px;
+    grid-template-columns: 60% 25%;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+  }
+}
+
+@media (max-width: 1050px) {
+  .vl {
+    height: 236px;
+  }
+  .secTwo .partition {
+    display: block;
+    width: 90%;
+    margin: auto;
+    transition: all 0.5s ease-in;
+  }
+  .secTwo .partition .bio {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .vl,
+  .vl1 {
+    display: none;
+  }
+  header {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+  }
+  header .logo {
+    margin: 0px;
+    height: 45px;
+    margin: 15px 0px 0px 8px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  }
+  header nav {
+    display: none;
+    width: 100%;
+  }
+  header nav ul {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+  }
+  header nav a {
+    display: block;
+    padding: 4px 6px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  header .container {
+    display: inline-block;
+    position: relative;
+    top: -60px;
+    margin: 16px;
+  }
+  .secTwo .partition .objective .list {
+    display: block;
+    width: 100%;
+  }
+  .secThree {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .secThree .degree-content:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 1.938em solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-top: 0;
+    margin-left: -1.937em;
+    margin-top: -1.93em;
+  }
+
+  .secThree .degree-content:hover:after {
+    border-right-color: transparent;
+    border-bottom-color: #00bfb6;
+  }
+  .secThree .col1,
+  .secThree .col2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .secThree .year {
+    margin-bottom: 2.5em;
+    margin-left: calc(49% + -1.937em);
+    margin-top: 0px;
+  }
+  .secFour .partition .progress-bar {
+    grid-template-columns: auto;
+  }
+  .secFour .partition .round-progress-bar .subPartition {
+    grid-template-columns: auto;
+    width: 25%;
+    margin: auto;
+  }
+  .secFive .partition {
+    grid-template-columns: auto;
+  }
+  .secFive input,
+  .secFive textarea {
+    width: 90%;
+  }
+  .secFive button {
+    width: 30%;
+    height: 10%;
+  }
+  .secFive .partition .number {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .secOne #background {
+    height: 50vh;
+  }
+  .secOne .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+  .secTwo .partition .bio {
+    width: 90%;
+    margin: auto;
+  }
+  .scroll-top {
+    margin-left: 88%;
+  }
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/circle.css">
+    <title>PORTFOLIO</title>
+</head>
+
+<body>
+    <div class="scroll-top" id="scroll-top">
+        <i class="fa fa-chevron-up"></i>
+        <script>
+                window.onscroll = function () {
+                if(window.scrollTop>=50){
+                    document.getElemntById("scroll-top").fadeIn(200);                         
+                    }
+                    else{
+                    document.getElementById("scroll-top").fadeOut(200);
+                    }
+                };
+
+            document.getElementById("scroll-top").addEventListener("click",function(){
+                window.scrollTo(0,0);
+            })
+        </script>
+    </div>
+    <div class="secOne" id="home">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="background" id="background" alt="background" />
+        <div class="content">
+            <img src="https://image.ibb.co/ims4Ep/logo.png" id="logo" alt="logo" />
+            <h1>Welcome to <br>Tech Media</h1>
+        </div>
+    </div>
+    <header id="header">
+        <div class="logo">
+            Tech Media
+        </div>
+        <div onclick="myFunction(this)">
+            <div class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active" onclick="activeFunction(this)"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                    <li><a href="#About" onclick="activeFunction(this)">About</a></li>
+                    <li><a href="#Resume" onclick="activeFunction(this)">Resume</a></li>
+                    <li><a id="eventClick" href="#Skill">Skills</a></li>
+                    <li><a href="#Contact" onclick="activeFunction(this)">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            var header = document.getElementById("header");
+
+            function activeFunction(x) {
+                if (x.id === undefined)
+                    x = document.getElementById("eventClick");
+
+                header.querySelectorAll('[class="active"]')[0].classList.remove("active");
+                x.classList.toggle("active");
+            }
+
+
+            function myFunction(x) {
+                x.classList.toggle("change");
+                header.classList.toggle("change-header");
+            }
+            window.onscroll = function() {
+                fixedHeader();
+            };
+
+            function fixedHeader() {
+                console.log(window.pageYOffset);
+                console.log(header.offsetTop);
+                if (window.pageYOffset > header.offsetTop && window.pageYOffset>=400) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+            document.getElementById("eventClick").addEventListener("click", activeFunction);
+        </script>
+
+    </header>
+
+    <section class="secTwo" id="About">
+        <h1>ABOUT ME</h1>
+        <div style="text-align: center; width:100%">
+            <span style="color:lightgrey; font-size:15px;">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;  <span style="font-size:20px ">&#9830;&#9830;</span> &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span>
+        </div>
+        <div class="partition " id="partition">
+            <section class="objective">
+                <h2>Objective<br></h2>
+                <p>An opportunity to work and upgrade oneself, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community. I’m presently expanding my solid experience in UI / UX design. I focus
+                    on using my interpersonal skills to build good user experience and create a strong interest in my employers. I hope to develop skills in motion design and my knowledge of the Web, and become an honest asset to the business. As an individual,
+                    I’m self-confident you’ll find me creative, funny and naturally passionate. I’m a forward thinker, which others may find inspiring when working as a team.
+                </p>
+                <h2>What I Do ?<br></h2>
+                <p>I have been working as a web interface designer since. I have a love of clean, elegant styling, and I have lots of experience in the production of CSS3 and HTML5 for modern websites. I loving creating awesome as per my clients’ need. I
+                    think user experience when I try to craft something for my clients. Making a design awesome.
+                </p>
+                <div class="list">
+                    <ul>
+                        <li><span style=color:green;>&#10004;</span > User Experience Design</li>
+                        <li><span style=color:green;>&#10004;</span >Interface Design</li>
+                        <li><span style=color:green;>&#10004;</span >Product Design</li>
+                    </ul>
+                    <ul>
+                        <li> <span style=color:green;>&#10004;</span >Branding Design</li>
+                        <li><span style=color:green;>&#10004;</span > Digital Painting</li>
+                        <li><span style=color:green;>&#10004;</span >Video Editing</li>
+                    </ul>
+                </div>
+
+            </section>
+            <section class="bio">
+                    <img src="avatar.png" alt="avatar"> 
+                    <p><b>Name:</b>Mustafa</p>
+                    <p><b>Date of birth:</b>dd/mm/yyyy</p>
+                    <p><b>Address:</b>...</p>
+                    <p><b>Nationality:</b>...</p>
+            </section>
+        </div>
+        <script>
+            window.onresize=function(){
+                changeSize();
+            };
+            function  changeSize(){
+                const width_max=window.matchMedia("(max-width: 1050px)");
+                const width_min=window.matchMedia("(min-width: 1050px)");
+                if(width_max.matches)
+                {
+                    var removeId=document.getElementById("partition")
+                    if(removeId.children[0].className==="objective")
+                    removeId.appendChild(removeId.removeChild(removeId.children[0]));
+                }
+                else if(width_min.matches)
+                {
+                    var removeId=document.getElementById("partition")
+                    if(removeId.children[0].className==="bio")
+                    removeId.appendChild(removeId.removeChild(removeId.children[0]));
+                }
+            }
+            changeSize();
+        </script>
+    </section>
+
+    <section class="secThree" id="Resume">
+    <h1>RESUME</h1>
+    <div style="text-align: center; width:100%">
+        <span style="color:lightgrey; font-size:15px;">&#9472;&#9472;&#9472;&#9472;&#9472;  <span style="font-size:20px ">&#9830;&#9830;</span> &#9472;&#9472;&#9472;&#9472;&#9472;</span>
+                </div>
+                <h2>Education</h2>
+                <div class="row">
+                    <div class="col1">
+                        <div class="year">
+                            <p>Mar,2011 Present</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col2">
+                        <div class="degree-content">
+                            <h3>BACHELOR DEGREE CERTIFICATE</h3>
+                            <h4>BA(Hons) in UI Engineering, Arts University, Pabna, USA</h4>
+                            <p> I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col1">
+                        <div class="year">
+                            <p>Mar,2011 Present</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col2">
+                        <div class="degree-content">
+                            <h3>BACHELOR DEGREE CERTIFICATE</h3>
+                            <h4>BA(Hons) in UI Engineering, Arts University, Pabna, USA</h4>
+                            <p> I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col1">
+                        <div class="year">
+                            <p>Mar,2011 Present</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col2">
+                        <div class="degree-content">
+                            <h3>BACHELOR DEGREE CERTIFICATE</h3>
+                            <h4>BA(Hons) in UI Engineering, Arts University, Pabna, USA</h4>
+                            <p> I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col1">
+                        <div class="year">
+                            <p>Mar,2011 Present</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col2">
+                        <div class="degree-content">
+                            <h3>BACHELOR DEGREE CERTIFICATE</h3>
+                            <h4>BA(Hons) in UI Engineering, Arts University, Pabna, USA</h4>
+                            <p> I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col1">
+                        <div class="year">
+                            <p>Mar,2011 Present</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="vl1"></div>
+                    </div>
+                    <div class="col2">
+                        <div class="degree-content">
+                            <h3>BACHELOR DEGREE CERTIFICATE</h3>
+                            <h4>BA(Hons) in UI Engineering, Arts University, Pabna, USA</h4>
+                            <p> I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="secFour" id="Skill">
+                <h1>SKILLS</h1>
+                <div style="text-align: center; width:100%">
+                    <span style="color:lightgrey; font-size:15px;">&#9472;&#9472;&#9472;&#9472;  <span style="font-size:20px ">&#9830;&#9830;</span> &#9472;&#9472;&#9472;&#9472;</span>
+                </div>
+                <div class="partition">
+                    <div class="progress-bar" id="progress-bar">
+                        <div>
+                            <label>HTML/CSS</label>
+                            <span style="float:right;margin-right:25px;">60%</span>
+                            <label><br></label>
+                            <progress max=100 value=60></progress>
+                            <label><br>Java</label>
+                            <span style="float:right;margin-right:25px;">60%</span>
+                            <label><br></label>
+                            <progress max=100 value=60></progress>
+                        </div>
+                        <div>
+                            <label>Javascript</label>
+                            <span style="float:right;margin-right:25px;">40%</span>
+                            <label><br></label>
+                            <progress max=100 value=40></progress>
+                            <label><br>C/C++</label>
+                            <span style="float:right; margin-right:25px;">80%</span>
+                            <label><br></label>
+                            <progress max=100 value=80></progress>
+                        </div>
+                        <script>
+                            function move() {
+                                var id = document.getElementsByTagName("progress");
+                                var parent = document.getElementById("progress-bar");
+                                var id1 = parent.getElementsByTagName("span");
+                                var max = [, , , ];
+                                var intervalId = [, , , ];
+                                for (let i = 0; i < id.length; i++) {
+                                    (function(i) {
+                                        var value = 0;
+                                        max[i] = id[i].getAttribute("value");
+                                        intervalId[i] = setInterval(myTimer, 50);
+
+                                        function myTimer() {
+                                            if (value >= max[i]) {
+                                                clearInterval(intervalId[i]);
+                                            } else {
+                                                value++;
+                                                var elem = id[i].setAttribute("value", value);
+                                                id1[i].innerHTML = value + "% ";
+                                            }
+                                        }
+                                    })(i);
+                                }
+                            }
+                            document.getElementById("eventClick").addEventListener("click", move);
+                        </script>
+                    </div>
+
+                    <div class="round-progress-bar">
+                        <h2>MORE SKILLS</h2>
+                        <div class="subPartition">
+                            <div class="c100 p25 Color">
+                                <span>25%</span>
+                                <div class="slice">
+                                    <div class="bar"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div class="c100 p85 Color">
+                                <span>85%</span>
+                                <div class="slice">
+                                    <div class="bar"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div class="c100 p45 Color">
+                                <span>45%</span>
+                                <div class="slice">
+                                    <div class="bar"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div class="c100 p50 Color">
+                                <span>50%</span>
+                                <div class="slice">
+                                    <div class="bar"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="secFive" id="Contact">
+                <h1>GET IN TOUCH</h1>
+                <div style="text-align: center; width:100%">
+                    <span style="color:lightgrey; font-size:15px;">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;  <span style="font-size:20px ">&#9830;&#9830;</span> &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span>
+                </div>
+                <div class="partition">
+                    <form action="mailto:mustafameon490@gmail.com">
+                        <label>Email<br></label>
+                        <input type="email" required/>
+                        <label><br>Subject<br></label>
+                        <input type="text" />
+                        <label><br>Message<br></label>
+                        <textarea name="message" cols="30" rows="10"></textarea>
+                        <br>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <div class="number">
+                        <i class="fa fa-map-marker fa-3x"></i>
+                        <p>
+                            <b> Address/Street</b> 239/2 Awesome Street, Karachi,Pakistan
+                        </p>
+                        <i class="fa fa-phone fa-3x"></i>
+                        <p>
+                            <b> Phone Number</b> 03xx xxxxxxx (021) 3xxx xxxx
+                        </p>
+                        <i class="fa fa-envelope fa-3x"></i>
+                        <p>
+                            <b> Support</b> @websitesname.com
+                        </p>
+                        <i class="fa fa-paperclip fa-3x"></i>
+                        <p>
+                            www.<b>websitesname</b>.com
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <footer>
+                <p>Tech Media &copy; 2019</p>
+            </footer>
+</body>
+
+</html>

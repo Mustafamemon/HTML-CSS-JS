@@ -1,0 +1,229 @@
+#sec-one
+{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+	background:url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/MPaEbz-/videoblocks-cgi-3d-animation-of-flying-through-big-white-clouds-high-in-sky_b6_oq6gk_thumbnail-full01.png);
+	height:600px;
+	width:100%;
+}
+header
+{
+	position:absolute;
+	top:0px;
+	left:0;
+	padding:0 100px;
+	background:#262626;
+	width:100%;
+	box-sizing:border-box;
+}
+header .logo
+{
+	color:#fff;
+	height:0px;
+	line-height:50px;
+	font-size:24px;
+	font-weight:bold;
+	
+}	
+header
+{
+	padding :0 20px;
+}
+header nav
+{
+	float:right;
+}
+header nav ul
+{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+header nav ul li 
+{
+	list-style:none;
+}
+header nav ul li a
+{
+	height:50px;
+	line-height:50px;
+	padding:0 20px;
+	color:#fff;
+	text-decoration:none;
+	display:block;
+}
+header nav ul li a.active,header nav ul li a:hover
+{
+	color:#fff;
+	background:#2196f3;
+}
+.menu-toggle
+{
+	color:#fff;
+	float:right;
+	line-height:50px;
+	font-size:24px;
+	cursor:pointer;
+	display:none;
+	border:2px solid grey;
+	padding:1px 10px;
+	border-radius:20px;
+}
+.menu-toggle:hover
+{
+	background:grey;	
+}
+	
+@media (max-width:768px)
+{
+	#sec-one
+	{
+		background:url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/MPaEbz-/videoblocks-cgi-3d-animation-of-flying-through-big-white-clouds-high-in-sky_b6_oq6gk_thumbnail-full01.png);
+		background-size:cover;
+		height:680px;
+	}
+	header 
+	{
+		padding:0 20px
+	}
+	.menu-toggle
+	{
+		display:block ;
+	}
+	header nav
+	{
+		display:none;
+		position:absolute;
+		width:100%;
+		height:calc(100vh - 50px);
+		background:#333;
+		top:50px;
+		left:0;
+		transition:0.5s;
+	}
+	header nav.active
+	{
+		display:inline;
+		left=0;
+	}
+	header nav ul 
+	{
+		display:block;
+		text-align:center;
+	}
+	header nav ul li a 
+	{
+		border-bottom: 1px solid rgba(0,0,0,.2);
+	}	
+}
+
+.image img
+{
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:50%;
+	display: block;
+    padding:1px;
+	border:2px solid black;
+}
+h4
+{
+	font-family:Comic Sans MS;
+	color:black;
+	text-align:center;
+}
+h6
+{
+	font-family:Comic Sans MS;
+	color:black;
+	text-align:center;
+}
+#sec-two
+{
+	font-family:sans-serif;
+	background:white;
+	width:100%;
+	height:385px;
+}
+.row h2,h3
+{
+	font-family:Comic Sans MS;
+	color:black;
+	text-align:center;
+}
+.row p
+{
+	font-size:15px;
+	font-family:Courier New;
+	text-align:center;
+}
+.col-lg-3
+{
+  float: left;
+  width: 32.33%;
+  padding: 5px;
+  text-align:center;
+  box-sizing:border-box;
+}
+
+/* Clear floats after image containers */
+.col-lg-3::after 
+{
+  content: "";
+  clear: both;
+  display: table;
+}
+@media (max-width:768px)
+{
+	.col-lg-3 
+	{
+		width:100%;
+	}
+	#sec-two
+	{
+		background:white;
+		height:925px;
+		box-sizing:border-box;
+	}	
+}
+#sec-three
+{
+	font-family:sans-serif;
+	width:100%;
+	height:290px;
+	background:#82d4ec;
+	box-sizing:border-box;
+}
+.col-lg-4
+{
+	float: left;
+	width: 47%;
+	padding: 5px;
+	text-align:center;
+}
+.col-lg-4::after 
+{
+  content: "";
+  clear: both;
+  display: table;
+}
+@media (max-width:768px)
+{
+	.col-lg-4 
+	{
+		width:100%;
+	}	
+	#sec-three
+	{
+		height:440px;
+		background:#82d4ec;
+		box-sizing:border-box;
+	}
+}
+p
+{
+	font-size:15px;
+	font-family:Courier New;
+	text-align:center;
+}

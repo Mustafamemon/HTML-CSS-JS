@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="javascript.js"></script>
+    <title>GPA CALCULATOR</title>
+</head>
+
+<body>
+    <h1>SGPA and CGPA Calculator</h1>
+    <div class="container">
+        <label>Current CGPA : </label>
+        <input name="currentCgpa" placeholder="Current CGPA" type="decimal" value=0>
+        <br>
+        <label>Total <i>credit hours </i>: </label>
+        <input name="totalCrdHr" placeholder="Total credit hours" type="number" value=0>
+        <div id="Courses" class="Courses">
+            <div id="courseDetail-0" class="fadeIn">
+                <input name="cousreName-0" placeholder="CourseName">
+                <select name="crdtHr-0">
+                <option value=0 disabled selected>Crdt.hr</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+            </select>
+                <select name="aGrade-0" id="aGrade-0" onchange="GradeSelecting(this)">
+                <option value="0" disabled selected>Grade</option>
+                <option value=4.00>A+/A</option>
+                <option value=3.67>A-</option>
+                <option value=3.33>B+</option>
+                <option value=3.00>B</option>
+                <option value=2.67>B-</option>
+                <option value=2.33>C+</option>
+                <option value=2.00>C</option>
+                <option value=1.67>C-</option>
+                <option value=1.33>D+</option>
+                <option value=1.00>D</option>
+                <option value=0.00>F</option>
+            </select>
+                <select name="nGrade-0" id="nGrade-0" onchange="GradeSelecting(this)">
+                <option value="0" disabled selected>Grade</option>
+                <option value=4.00>4.00</option>
+                <option value=3.67>3.67</option>
+                <option value=3.33>3.33</option>
+                <option value=3.00>3.00</option>
+                <option value=2.67>2.67</option>
+                <option value=2.33>2.33</option>
+                <option value=2.00>2.00</option>
+                <option value=1.67>1.67</option>
+                <option value=1.33>1.33</option>
+                <option value=1.00>1.00</option>
+                <option value=0.00>0.00</option>
+            </select>
+                <button onclick="removeCourses(this)" id="remove-0" disabled style="border:none ; background-color: transparent"><i class="fa fa-times-circle "></i></button>
+            </div>
+        </div>
+        <button onclick="addCourses(this)" name="addCourses" type="button"><i class="fa fa-plus"></i>Add Courses</button>
+        <button onclick="calcGpa(this)" name="Calculate" type="button">Calculate</button>
+        <br>
+        <label>SGPA : </label>
+        <input type="decimal" name="SGPA" placeholder="SGPA" readonly>
+        <label>CGPA : </label>
+        <input type="decimal" name="CGPA" placeholder="CGPA" readonly>
+    </div>
+</body>
+
+</html>
