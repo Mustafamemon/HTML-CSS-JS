@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Source code generated using layoutit.com">
+	<meta name="author" content="LayoutIt!">
+
+	<title>Weather Forecast</title>
+
+	<!-- CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/carousel.css">
+
+
+</head>
+
+<body>
+	<div>
+		<div class="navbar" style="display: flex; justify-content: flex-end; align-items: flex-end;">
+			<form autocomplete="off" action="/action_page.php">
+				<div class="autocomplete" style="width:300px; float: right;">
+					<input id="myCities" type="text" name="myCities" placeholder="Cities" value="New York City">
+				</div>
+			</form>
+		</div>
+
+		<br />
+		<div style="width: 96%; margin: auto;">
+			<h2 id='heading'></h2>
+			<ul class="nav nav-pills" role="tablist" style="justify-content: center;">
+				<li class="nav-item" onclick="daysData()">
+					<a id="daysData" class="nav-link active" data-toggle="pill" href="#Days">Days</a>
+				</li>
+				<li class="nav-item" onclick="hourlyData()">
+					<a id="hourlyData" class="nav-link" data-toggle="pill" href="#Days">Hours</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="Days" class="tab-pane active">
+					<div class="top-content">
+						<div class="container-fluid">
+							<div id="carousel-example" class="carousel slide" data-ride="carousel"
+								style="padding:0px 20px;">
+								<div id='weatherData' class="carousel-inner row w-100 mx-auto" role="listbox">
+									<div style="padding: 7% 46%;">
+										<div class="spinner-border text-info"></div>
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carousel-example" role="button"
+									data-slide="prev" style="background-color: black; width: 30px; height: 315px;">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carousel-example" role="button"
+									data-slide="next" style="background-color: black; width: 30px;height: 315px;">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Javascript -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/carousel.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/cities.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/map_data.js"></script>
+</body>
+
+</html>
